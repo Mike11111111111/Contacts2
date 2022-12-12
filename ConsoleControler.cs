@@ -8,6 +8,7 @@ namespace OnlineExercise;
 
 public class ConsoleControler
 {
+    // miau
     public Contact GetContactInfo()
     {
         Contact person = new Contact();
