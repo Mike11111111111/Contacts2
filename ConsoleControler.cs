@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineExercise;
+﻿namespace OnlineExercise;
 
 public class ConsoleControler
 {
-    // miau
     public Contact GetContactInfo()
     {
         Contact person = new Contact();
@@ -30,46 +23,29 @@ public class ConsoleControler
 
     public string GetName()
     {
-        Contact person = new Contact();
-
         Console.WriteLine("Enter name");
-        person.Name = Console.ReadLine();
-
-        return person.Name;
+        return Console.ReadLine();
     }
 
     public string GetSurname()
     {
-        Contact person = new Contact();
-
         Console.WriteLine("Enter surname");
-        person.Surname = Console.ReadLine();
-
-        return person.Surname;
+        return Console.ReadLine();
     }
 
     public int GetPhoneNumber()
     {
-        Contact person = new Contact();
-
-        Console.WriteLine("Enter Phone Number");
-        person.PhoneNumber = int.Parse(Console.ReadLine());
-
-        return person.PhoneNumber;
+        Console.WriteLine("Enter phone number");
+        return int.Parse(Console.ReadLine());
     }
     public int GetAge()
     {
-        Contact person = new Contact();
-
         Console.WriteLine("Enter age");
-        person.Age = int.Parse(Console.ReadLine());
-
-        return person.Age;
+        return int.Parse(Console.ReadLine());
     }
     public int GetId()
     {
         Console.WriteLine("Enter id");
-        int id = int.Parse(Console.ReadLine());
-        return id;
+        return int.Parse(Console.ReadLine());
     }
 }

@@ -18,14 +18,15 @@ public class Contact
     public Contact()
     {
         Id = Counter++;
-    } 
+    }
+
     public override string ToString()
     {
-        return $"Name:{Name}\t" +
+        return $"Id:{Id}\t" +
+               $"Name:{Name}\t" +
                $"Surname: {Surname}\t" +
                $"Age: {Age}\t" +
-               $"Phone Number: {PhoneNumber}\t" +
-               $"Id:{Id}\t";
+               $"Phone Number: {PhoneNumber}\t";
     }
     //dsadsadas
 }
