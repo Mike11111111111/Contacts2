@@ -8,7 +8,6 @@ namespace OnlineExercise;
 
 public class Contact
 {
-    private static int Counter = 1;
     public int Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
@@ -17,7 +16,6 @@ public class Contact
 
     public Contact()
     {
-        Id = Counter++;
     }
 
     public override string ToString()

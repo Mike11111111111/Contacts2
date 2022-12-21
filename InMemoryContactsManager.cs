@@ -1,6 +1,6 @@
 ﻿namespace OnlineExercise;
 
-public class ContactsManager
+public class InMemoryContactsManager
 {
     private List<Contact> contactList = new List<Contact>();
 

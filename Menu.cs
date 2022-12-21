@@ -1,13 +1,15 @@
+using Contacts;
+
 namespace OnlineExercise;
 
 public class Menu
 {
-    private ContactsManager _contactManager;
+    private SqlContactsManager _sqlContactManager;
     private ConsoleControler _consoleControler;
 
-    public Menu(ContactsManager contactManager, ConsoleControler consoleControler)
+    public Menu(SqlContactsManager sqlContactManager, ConsoleControler consoleControler)
     {
-        _contactManager = contactManager;
+        _sqlContactManager = sqlContactManager;
         _consoleControler = consoleControler;
     }
     
@@ -51,12 +53,12 @@ public class Menu
     public void AddContact()
     {
         Contact person = _consoleControler.GetContactInfo();
-        _contactManager.AddContact(person);
+        _sqlContactManager.AddContact(person);
     }
 
     public void ShowAllContacts()
     {
-        List<Contact> contacts = _contactManager.GetAll();
+        List<Contact> contacts = _sqlContactManager.GetAll();
         foreach (Contact contact in contacts)
         {
             Console.WriteLine(contact);
@@ -65,20 +67,20 @@ public class Menu
     public void ShowContact()
     {
         int id = _consoleControler.GetId();
-        Contact foundContact = _contactManager.GetByID(id);
+        Contact foundContact = _sqlContactManager.GetByID(id);
         Console.WriteLine(foundContact);
     }
 
     public void RemoveContact()
     {
         int id = _consoleControler.GetId();
-        _contactManager.RemoveByID(id);
+        _sqlContactManager.RemoveByID(id);
     }
     
     public void UpdateContact()
     {
         int id = _consoleControler.GetId();
         Contact updateContact = _consoleControler.GetContactInfo();
-        _contactManager.UpdateByID(id, updateContact);
+        _sqlContactManager.UpdateByID(id, updateContact);
     }
 }
